@@ -9,10 +9,11 @@ pipeline {
                  }
                  stage(two)
                   {
-                    agent docker
-                           {
+                           agent { docker
+                                  {
                              image: nginx
                            }
+                                 }
                   }
          }
 }
