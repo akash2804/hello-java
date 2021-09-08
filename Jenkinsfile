@@ -1,18 +1,18 @@
 pipeline {
-         agent any
-         stages {
-                 stage('One') {
-                 steps {
-                     echo 'Hi, this is Zulaikha from edureka'
-                     sh 'mkdir akash'
-                 }
-                 }
-                 stage('Integration test') {
-                              agent {
-                                    docker {
-                                            image 'nginx'
-                                           }
-                              }
-                                    }
-         }
+
+    agent {
+        docker {
+            image 'nginx'
+        }
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building...'
+                sh 'docker -version'
+            }
+        }
+        
+    }
 }
