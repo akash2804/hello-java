@@ -4,7 +4,7 @@ pipeline {
                  stage('One') {
                  steps {
                      echo 'Hi, this is Zulaikha from edureka'
-                     touch akash.txt
+                     sh 'mkdir akash'
                  }
                  }
                  stage('Two') {
