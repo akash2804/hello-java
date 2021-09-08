@@ -4,6 +4,7 @@ pipeline {
                  stage('One') {
                  steps {
                      echo 'Hi, this is Zulaikha from edureka'
+                     mkdir akash
                  }
                  }
                  stage('Two') {
