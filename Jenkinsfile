@@ -7,13 +7,12 @@ pipeline {
                      sh 'mkdir akash'
                  }
                  }
-                 stage(two)
-                  {
-                           agent { docker
-                                  {
-                             image: nginx
-                           }
-                                 }
-                  }
+                 stage('Integration test') {
+                              agent {
+                                    docker {
+                                            image 'nginx'
+                                           }
+                              }
+                                    }
          }
 }
